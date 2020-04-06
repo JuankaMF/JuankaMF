@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        .carousel{
+            width: 100%;
+            overflow: scroll;
+            padding:30px;
+        }
+        .carousel__conteiner{
+            white-space: nowrap;
+            margin: 70px 0;
+            padding-bottom: 10px;
+            align-items: center;
+        }
+        .carousel__conteiner:hover .carousel__item{
+            opacity: 0.3;
+        }
+
+        .carousel__item{
+            background-color: black;
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
+            /* overflow: hidden;  para mas adelante*/
+            margin-right: 10px;
+            display: inline-block;
+            cursor: pointer;
+            transition: 300ms all;
+            transform-origin: center left;
+        }
+        .carousel__item:hover ~ .carousel__item{
+            transform: translate3d(100px, 0 ,0);
+        }
+
+        .carousel__conteiner:hover .carousel__item:hover{
+            transform: scale(1.5);
+            opacity: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section class="carousel">
+        <div class="carousel__conteiner">
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+        </div>
+    </section>
+</body>
+</html>
